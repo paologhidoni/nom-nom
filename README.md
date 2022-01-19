@@ -32,4 +32,4 @@ Since this project is open-ended you’ll need to write your own more specific u
 - Connect local and remote repos
 - Create project set up branch
 - Actualize npm directory and install express and cypress
-- Set up database on Heroku and connect to directory
+- Set up database, deploy on Heroku and connect to directory
