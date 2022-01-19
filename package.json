@@ -22,5 +22,8 @@
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
     "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "cypress": "^9.3.1"
   }
 }
