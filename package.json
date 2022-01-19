@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/fac-23/app-week2-team2#readme",
   "dependencies": {
+    "dotenv": "^14.2.0",
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
     "pg": "^8.7.1"
