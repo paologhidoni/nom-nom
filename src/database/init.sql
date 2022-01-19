@@ -1,18 +1,38 @@
 BEGIN;
 
-DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS users, reviews, restaurants, comments CASCADE;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
-  email TEXT UNIQUE NOT NULL,
-  password TEXT NOT NULL,
-  name TEXT NOT NULL
+  username VARCHAR(255) NOT NULL
 );
 
-INSERT INTO users (email, password, name) VALUES (
-  'test@gmail.com',
-  '$2a$10$YoazGoxCZFmVHkZWMbkH4uu91tocTXuODyrjucCgIpwbTvX1AC2wG',
-  'Test Testington'
+CREATE TABLE reviews (
+  id SERIAL PRIMARY KEY,
+  textcontent TEXT,
+  user_id INTEGER REFERENCES users(id) ON DELETE CASCADE, -- CASCADE means delete the post if the author gets deleted
+  rating INTEGER
 );
+
+CREATE TABLE restaurants (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  reviews_id INTEGER REFERENCES reviews(id)
+);
+
+CREATE TABLE comments (
+  id SERIAL PRIMARY KEY,
+  textcontent TEXT,
+  comment_review_id INTEGER REFERENCES reviews(id)  
+);
+
+-- INSERT INTO users (username) VALUES 
+--   ('Luigi'),
+--   ('Mario')
+-- ;
+
+-- INSERT INTO reviews (textcontent, user_id, rating) VALUES ('Reviewwwwww', 1, 5);
+
+
 
 COMMIT;
