@@ -3,7 +3,6 @@ const db = require("../src/database/connection.js");
 
 function get(request, response) {
 
-
     db.query("SELECT * FROM reviews").then((result) => {
         const reviews = result.rows;
         const reviewsList = reviews.map((review) => `

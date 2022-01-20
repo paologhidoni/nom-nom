@@ -1,6 +1,6 @@
 const express = require("express");
 const server = express();
-
+// const db = require("./src/database/connection.js")
 // Body parser
 const bodyParser = express.urlencoded({ extended: false });
 
@@ -19,6 +19,8 @@ server.get("/", home.get);
 
 // ADD REVIEW
 server.get("/add-review", addReview.get);
+
+server.post("/add-review", addReview.post);
 
 const PORT = process.env.PORT || 3000;
 
