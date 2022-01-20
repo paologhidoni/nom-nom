@@ -1,4 +1,6 @@
+// const db = require("./src/database/connection.js")
 
+const db = require("../src/database/connection.js")
 function get(request, response) {
   response.send(
   `
