@@ -2,30 +2,34 @@ const { response } = require("express");
 const db = require("../src/database/connection.js");
 
 function get(request, response) {
-
-    db.query("SELECT * FROM reviews").then((result) => {
-        const reviews = result.rows;
-        const reviewsList = reviews.map((review) => `
-        
+  db.query("SELECT * FROM reviews").then((result) => {
+    console.log(result.rows);
+    const reviews = result.rows;
+    const reviewsList = reviews
+      .map(
+        (review) => `
         <li class="post">
 
             <div class="post__header stack-md">
     
                 <div class="post__restaurant">
-                    <h2 class="post__restaurant--name">My Neighbours The Dumplings</h2>
+                    <h2 class="post__restaurant--name">${review.restaurant}</h2>
                     <div class="restaurant--rating">${review.rating}</div>
                 </div>
                 
-                <h3 class="post__author">${review.user_id}</h3>
+                <h3 class="post__author">${review.username}</h3>
     
     
             </div>
     
             <p class="post__body">${review.textcontent}</p>
             
-        </li>`).reverse().join("");
-        
-        response.send(`
+        </li>`
+      )
+      .reverse()
+      .join("");
+
+    response.send(`
         
         <!DOCTYPE html>
         <html lang="en">
@@ -58,9 +62,7 @@ function get(request, response) {
         </html>
         
     `);
-});
-
-
+  });
 }
 
-module.exports = { get }
+module.exports = { get };
