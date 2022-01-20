@@ -26,12 +26,15 @@ CREATE TABLE comments (
   comment_review_id INTEGER REFERENCES reviews(id)  
 );
 
--- INSERT INTO users (username) VALUES 
---   ('Luigi'),
---   ('Mario')
--- ;
+INSERT INTO users (username) VALUES 
+  ('Luigi'),
+  ('Mario')
+;
 
--- INSERT INTO reviews (textcontent, user_id, rating) VALUES ('Reviewwwwww', 1, 5);
+INSERT INTO reviews (textcontent, user_id, rating) VALUES 
+  ('Reviewwwwww', 1, 5),
+  ('It was good', 2, 4)
+;
 
 
 
