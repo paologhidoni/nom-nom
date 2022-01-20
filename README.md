@@ -1,3 +1,7 @@
+### 🔗 Visit the [live site](https://nom-nom-app.herokuapp.com/)
+
+# Installation guide
+
 # User stories
 
 - As a user, I want to: submit information to your site for anyone to see
@@ -25,7 +29,7 @@ Since this project is open-ended you’ll need to write your own more specific u
 
 - Scrum Facilitator and UX Design - _Paolo_
 - DevOps - _Juliette_
-- Quality Assurance _Orian_
+- Quality Assurance - _Orian_
 
 ## Project Set up:
 
