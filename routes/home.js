@@ -22,7 +22,7 @@ function get(request, response) {
     
                 <div class="post__restaurant">
                     <h2 class="post__restaurant--name">${review.restaurant}</h2>
-                    <div class="restaurant--rating">${ratingConverter(review.rating)}</div>
+                    <div class="restaurant__rating">${ratingConverter(review.rating)}</div>
                 </div>
                 
                 <h3 class="post__author">${review.username}</h3>

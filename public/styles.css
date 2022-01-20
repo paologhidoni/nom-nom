@@ -18,6 +18,7 @@ body {
   color: var(--font-color-primary);
   font-family: 'Lobster', cursive;
   font-family: 'Nunito', sans-serif;
+  font-weight: 600;
 }
 
 /* Hero section */
@@ -38,7 +39,8 @@ body {
 .hero__title {
   color: #fff;
   font-family: 'Lobster', cursive;
-  font-size: 3.5rem;
+  font-size: 3.5rem;  
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
 
 .hero__subtitle {
@@ -58,6 +60,7 @@ button, .link-leave-review, .link-back-home {
   transition: transform 0.3s;
   text-decoration: none;
   text-align: center;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
 
 button:hover, .link-leave-review:hover, .link-back-home:hover {
@@ -91,8 +94,8 @@ button:hover, .link-leave-review:hover, .link-back-home:hover {
   background-color: var(--color-primary);
   padding: 1rem;
   color: #fff;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
-
 
 .post__restaurant {
   display: flex;
@@ -104,6 +107,10 @@ button:hover, .link-leave-review:hover, .link-back-home:hover {
 
 .post__restaurant--name {
   font-family: 'Lobster', cursive;
+}
+
+.restaurant__rating {
+  text-shadow: 4px 4px 8px rgba(0,0,0,1);
 }
 
 .post__body {
