@@ -1,0 +1,164 @@
+/* Variables */
+
+:root {
+  --font-color-primary: #333;
+  --color-primary: #F36E16;
+}
+
+
+/* Base */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--font-color-primary);
+  font-family: 'Lobster', cursive;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Hero section */
+
+.hero {
+  min-height: 30vh;
+  background-image: linear-gradient(to right bottom,rgba(22, 22, 22, 0.8), rgba(105, 105, 105, 0.8)), url(orange.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.hero__title {
+  color: #fff;
+  font-family: 'Lobster', cursive;
+  font-size: 3.5rem;
+}
+
+.hero__subtitle {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+button, .link-leave-review, .link-back-home {
+  background-color: var(--color-primary);
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-decoration: none;
+  text-align: center;
+}
+
+button:hover, .link-leave-review:hover, .link-back-home:hover {
+  transform: scale(1.1);
+}
+
+.wrapper {
+  max-width: 60rem;
+  margin: 4rem auto;
+  display: flex;
+  /* flex-direction: row-reverse; */
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.wrapper > * {
+  list-style: none;
+}
+
+/* Single Post styling */
+
+.post {
+  border: 3px solid var(--color-primary);
+  border-radius: 10px;
+  flex: 1 1 200px;
+}
+
+.post__header {
+  background-color: var(--color-primary);
+  padding: 1rem;
+  color: #fff;
+}
+
+
+.post__restaurant {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.post__restaurant--name {
+  font-family: 'Lobster', cursive;
+}
+
+.post__body {
+  padding: 1rem;
+}
+
+
+/* REVIEW PAGE */
+
+.form-wrapper {
+  max-width: 20rem;
+  margin: 4rem auto;
+}
+
+#review-form {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea, input, button {
+  padding: 1rem;
+  border-radius: 10px;
+  border: 3px solid var(--color-primary);
+  font-family: 'Lobster', cursive;
+  font-family: 'Nunito', sans-serif;
+}
+
+label {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+
+
+
+/* UTILITY CLASSES */
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+}
+
+.width-md {
+  max-width: 40rem;
+}
+
+.width-sm {
+  max-width: 20rem;
+}
+
+.stack-sm > * + * {
+  margin-top: 0.5rem;
+}
+
+.stack-md > * + * {
+  margin-top: 1rem;
+}
