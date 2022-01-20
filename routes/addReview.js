@@ -1,9 +1,8 @@
-// const db = require("./src/database/connection.js")
+const db = require("../src/database/connection.js");
 
-const db = require("../src/database/connection.js")
 function get(request, response) {
   response.send(
-  `
+    `
   <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -55,23 +54,21 @@ function get(request, response) {
   </body>
   </html>
   `
-)}
-
+  );
+}
 
 function post(request, response) {
-
   const userName = request.body.user;
-  const restaurantName = request.body.restaurant;
+  const restaurant = request.body.restaurant;
   const reviewBody = request.body.body;
   const rating = request.body.rating;
 
-  console.log(userName, restaurantName, reviewBody, rating);
-
-  db.query(`INSERT INTO reviews(textcontent, rating) VALUES($1,$2)`, [reviewBody, rating])
-    .then(() => {
-      response.redirect("/");
+  db.query(
+    `INSERT INTO reviews(username, restaurant, textcontent, rating) VALUES($1,$2,$3,$4)`,
+    [userName, restaurant, reviewBody, rating]
+  ).then(() => {
+    response.redirect("/");
   });
-  
 }
 
-module.exports = { get, post }
+module.exports = { get, post };
