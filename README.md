@@ -1,6 +1,11 @@
 ### 🔗 Visit the [live site](https://nom-nom-app.herokuapp.com/)
 
-# Installation guide
+# How to install
+- Git clone https://github.com/fac-23/nom-nom-app.git
+- Run command `npm install` in terminal
+- To start sever run command `npm run dev`
+- For cypress testing run command `npm run test`
+- Access locally on localhost:3000
 
 # User stories
 
