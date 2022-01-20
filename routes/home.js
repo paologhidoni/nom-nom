@@ -7,11 +7,10 @@ const ratingConverter = (rating) => {
     stars += `⭐️`;
   }
   return stars;
-}
+};
 
 function get(request, response) {
   db.query("SELECT * FROM reviews").then((result) => {
-    console.log(result.rows);
     const reviews = result.rows;
     const reviewsList = reviews
       .map(
@@ -22,7 +21,9 @@ function get(request, response) {
     
                 <div class="post__restaurant">
                     <h2 class="post__restaurant--name">${review.restaurant}</h2>
-                    <div class="restaurant--rating">${ratingConverter(review.rating)}</div>
+                    <div class="restaurant--rating">${ratingConverter(
+                      review.rating
+                    )}</div>
                 </div>
                 
                 <h3 class="post__author">${review.username}</h3>

@@ -57,12 +57,20 @@ function get(request, response) {
   );
 }
 
-function post(request, response) {
-  const userName = request.body.user;
-  const restaurant = request.body.restaurant;
-  const reviewBody = request.body.body;
-  const rating = request.body.rating;
+function sanitise(...inputArr) {
+  return inputArr.map((inputStr) => {
+    return inputStr.replace(/>/g, "&lt;");
+  });
+}
 
+function post(request, response) {
+  let userNameNS = request.body.user;
+  let restaurantNS = request.body.restaurant;
+  let reviewBodyNS = request.body.body;
+  let ratingNS = request.body.rating;
+  let sanitisedArr = sanitise(userNameNS, restaurantNS, reviewBodyNS, ratingNS);
+  //console.log(sanitisedArr);
+  const [userName, restaurant, reviewBody, rating] = sanitisedArr;
   db.query(
     `INSERT INTO reviews(username, restaurant, textcontent, rating) VALUES($1,$2,$3,$4)`,
     [userName, restaurant, reviewBody, rating]
