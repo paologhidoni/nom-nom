@@ -1,5 +1,5 @@
 const { response } = require("express");
-const db = require("../src/database/connection.js");
+const db = require("../database/connection.js");
 
 const ratingConverter = (rating) => {
   let stars = ``;
