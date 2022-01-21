@@ -8,8 +8,8 @@
 ## Local Database Setup
 
 - In your terminal 
-  - run ` chmod +x ./scripts/create_db
-  - run ` chmod +x ./scripts/populate_db
+  - run ` chmod +x ./scripts/create_db `
+  - run ` chmod +x ./scripts/populate_db `
   - run ` ./scripts/create_db <name of your local database> `
   - run ` ./scripts/populate_db `
   - run ` psql `
