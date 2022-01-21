@@ -4,9 +4,9 @@
 
 - Git clone https://github.com/fac-23/nom-nom-app.git
 - Run command `npm install` in terminal
-- To start sever run command `npm run dev`
-- For cypress testing run command `npm run test`
-- Access locally on localhost:3000
+
+## Local Database Setup
+
 - In your terminal 
   - run ./scripts/create_db <name of your local database>
   - run ./scripts/populate_db
@@ -14,6 +14,9 @@
   - run ` \connect <name of your local database> `
   - run ` \dt ` to check the tables are there. There should be only one table named "reviews"
   
+- To start sever run command `npm run dev`
+- For cypress testing run command `npm run test`
+- Access locally on localhost:3000
 
 # User stories
 
