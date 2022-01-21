@@ -2,11 +2,9 @@ const { response } = require("express");
 const db = require("../database/connection.js");
 
 const ratingConverter = (rating) => {
-  let stars = ``;
-  for (let i = 0; i < rating; i++) {
-    stars += `⭐️`;
-  }
-  return stars;
+  let stars = `⭐️`;
+  const starRating = stars.repeat(rating);
+  return starRating;
 };
 
 function get(request, response) {
