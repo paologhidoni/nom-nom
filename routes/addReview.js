@@ -59,7 +59,7 @@ function get(request, response) {
 
 function sanitise(...inputArr) {
   return inputArr.map((inputStr) => {
-    return inputStr.replace(/>/g, "&lt;");
+    return inputStr.replace(/</g, "&lt;");
   });
 }
 
@@ -69,7 +69,7 @@ function post(request, response) {
   let reviewBodyNS = request.body.body;
   let ratingNS = request.body.rating;
   let sanitisedArr = sanitise(userNameNS, restaurantNS, reviewBodyNS, ratingNS);
-  //console.log(sanitisedArr);
+  console.log(sanitisedArr);
   const [userName, restaurant, reviewBody, rating] = sanitisedArr;
   db.query(
     `INSERT INTO reviews(username, restaurant, textcontent, rating) VALUES($1,$2,$3,$4)`,
