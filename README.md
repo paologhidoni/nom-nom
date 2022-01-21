@@ -1,11 +1,19 @@
 ### 🔗 Visit the [live site](https://nom-nom-app.herokuapp.com/)
 
 # How to install
+
 - Git clone https://github.com/fac-23/nom-nom-app.git
 - Run command `npm install` in terminal
 - To start sever run command `npm run dev`
 - For cypress testing run command `npm run test`
 - Access locally on localhost:3000
+- In your terminal 
+  - run ./scripts/create_db <name of your local database>
+  - run ./scripts/populate_db
+  - run ` psql `
+  - run ` \connect <name of your local database> `
+  - run ` \dt ` to check the tables are there. There should be only one table named "reviews"
+  
 
 # User stories
 
