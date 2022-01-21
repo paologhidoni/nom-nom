@@ -8,8 +8,8 @@
 ## Local Database Setup
 
 - In your terminal 
-  - run ./scripts/create_db <name of your local database>
-  - run ./scripts/populate_db
+  - run ` ./scripts/create_db <name of your local database> `
+  - run ` ./scripts/populate_db `
   - run ` psql `
   - run ` \connect <name of your local database> `
   - run ` \dt ` to check the tables are there. There should be only one table named "reviews"
