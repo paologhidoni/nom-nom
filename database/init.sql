@@ -15,8 +15,8 @@ CREATE TABLE reviews (
   rating INTEGER
 );
 
-INSERT INTO reviews (username, restaurant, textcontent, rating) VALUES 
-('user123','Wagamamas','Reviewwwwww', 3);
+-- INSERT INTO reviews (username, restaurant, textcontent, rating) VALUES 
+-- ('user123','Wagamamas','Reviewwwwww', 3);
 
 
 -- CREATE TABLE restaurants (

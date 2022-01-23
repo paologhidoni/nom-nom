@@ -1,4 +1,4 @@
-### 🔗 Visit the [live site](https://nom-nom-app.herokuapp.com/)
+### 🔗 Visit the [live site](https://nom-nom-fac23.herokuapp.com/)
 
 # How to install
 
