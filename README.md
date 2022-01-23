@@ -2,7 +2,7 @@
 
 # How to install
 
-- Git clone https://github.com/fac-23/nom-nom-app.git
+- Git clone https://github.com/paologhidoni/nom-nom
 - Run command `npm install` in terminal
 
 ## Local Database Setup
